@@ -13,6 +13,8 @@ def replace_define(field, value):
 		env['CPPDEFINES'].remove(found_define)
 	env['CPPDEFINES'].append((field, value)
 
+Read more: https://community.platformio.org/t/marlin-runtimeerror-deque-mutated-during-iteration/34661/5
+
 
 Firmware are not compatible with STM Chip so take note.
 https://github.com/MarlinFirmware/Marlin/issues/23806
