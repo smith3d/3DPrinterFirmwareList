@@ -1,6 +1,19 @@
 Ender 3 Files,
 GD is the latest Creality 4.2.2 Chip integrated due to Chip shortage
 
+if compile official GD Source, do replace existing replace_define the following lines since marlin outdated
+
+def replace_define(field, value):
+	found_define = None
+	for define in env['CPPDEFINES']:
+		if define[0] == field:
+			found_define = define
+			break
+	if found_define:
+		env['CPPDEFINES'].remove(found_define)
+	env['CPPDEFINES'].append((field, value)
+
+
 Firmware are not compatible with STM Chip so take note.
 https://github.com/MarlinFirmware/Marlin/issues/23806
 
